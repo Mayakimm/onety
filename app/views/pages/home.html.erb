@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg d-flex justify-content-between">
+<nav class="navbar navbar-expand-lg d-flex justify-content-between" style="padding:20px 80px; position: fixed; top: 0; width: 100%; background-color:#F8F7F1;">
   <div class="container-fluid">
     <%# logo %>
     <a class="navbar-brand fw-bold" href="#" style="font-size:36px;">원티</a>
@@ -14,22 +14,56 @@
     </div>
   </div>
 </nav>
-<div class="d-flex justify-content-between" id="home" style="padding: 140px 100px;">
-  <div id="home-left" style="width:60%">
-    <div style="font-size:96px; font-weight:bolder">
-      Onety,<br>
-      단 하나의 솔루션
+<div style="padding:30px 80px;">
+  <%# home section %>
+  <div class="d-flex justify-content-between" id="home" style="margin: 140px 100px;">
+    <div id="home-left" style="width:70%">
+      <div style="font-size:92px; font-weight:bolder">
+        Onety,<br>
+        단 하나의 솔루션
+      </div>
+      <p style="font-size:26px; padding-top:20px;">
+        월별 매출 및 지출 분석과 전략 수립을 통해<br>
+        당신의 비즈니스의 성장을 지원합니다
+      </p>
+      <div class="d-flex" style="padding-top:20px;">
+        <a href="" class="btn" style="width:130px; background-color:#FF5E00; border-radius:30px; color:white; margin-right:20px;">시작하기</a>
+        <a href="" class="btn" style="width:130px; border-radius:30px; border-color:#FF5E00; color:#FF5E00;">더 알아보기</a>
+      </div>
     </div>
-    <p style="font-size:26px; padding-top:20px;">
-      월별 매출 및 지출 분석과 전략 수립을 통해<br>
-      당신의 비즈니스의 성장을 지원합니다
-    </p>
-    <div class="d-flex" style="padding-top:20px;">
-      <a href="" class="btn" style="width:130px; background-color:#FF5E00; border-radius:30px; color:white; margin-right:20px;">시작하기</a>
-      <a href="" class="btn" style="width:130px; border-radius:30px; border-color:#FF5E00; color:#FF5E00;">더 알아보기</a>
+    <div id="home-right" style="width:20% overflow:hidden;">
+      <%= image_tag '/money.png', alt: 'Money Image' %>
     </div>
   </div>
-  <div id="home-right" style="width:30%">
-    <%= image_tag '/money.png', alt: 'Money Image' %>
+  <%# solutions section %>
+  <div id="solutions" style="padding:20px; margin-bottom:70px;">
+    <div>
+      <i class="fa-solid fa-check-to-slot" style="font-size:52px; margin-right:16px;"></i>
+      <span style="font-size:52px; font-weight:bolder">똑똑한 솔루션으로 간편한 월정산</span>
+      <p style="font-size:26px;">자동화된 지출 카테고리 분류와 심층 리포트로 운영의 투명성을 확보하고, 비즈니스 성장을 가속화하세요.</p>
+    </div>
+    <div id="solution1" class="w-100 d-flex justify-content-between" style="margin:100px 0px; width:1000px;">
+      <div>
+        <div style="font-size:44px; font-weight:bolder; margin-bottom:10px;">
+          한 번의 터치로<br>
+          손쉬운 정산
+        </div>
+        <p style="width:500px; font-size: 22px;">
+          엑셀 형식의 은행 거래 내역 파일을 간단히 업로드하세요.
+          처음 사용하거나 재사용하는 경우에도, 원티가 거래 내역을 신속하고 정확하게 자동으로 분류합니다.</p>
+        <a href="" class="btn" style="width:100px; background-color:#FF5E00; border-radius:30px; color:white; margin-right:20px;">시작하기</a>
+      </div>
+      <%= image_tag '/solution1.jpg', alt: 'Solution1 Image', style:"width:400px; height:300px;" %>
+    </div>
+    <div id="solution2" style="margin:150px 100px">
+      <%= image_tag '/solution2.jpg', alt: 'Solution2 Image', style:"width:300px; height:300px;" %>
+    </div>
+    <div id="solution3" style="margin:150px 100px">
+      <%= image_tag '/solution3.jpg', alt: 'Solution3 Image', style:"width:300px; height:300px;" %>
+    </div>
   </div>
+  <%# pricing section %>
+  <div id="pricing" style="padding:20px; margin-bottom:70px;"></div>
+  <%# contact section %>
+  <div id="contact" style="padding:20px; margin-bottom:70px;"></div>
 </div>
