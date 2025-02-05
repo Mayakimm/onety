@@ -1,2 +1,16 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<nav class="navbar navbar-expand-lg d-flex justify-content-between">
+  <div class="container-fluid">
+    <%# logo %>
+    <a class="navbar-brand fw-bold" href="#">원티</a>
+    <%# buttons %>
+    <div class="container-fluid" id="navbarNavAltMarkup">
+      <div class="navbar-nav d-flex justify-content-end">
+        <%# nav-link-active 효과 넣을 수 있어. 클릭 되었을 때 글씨 굵기 조금 다르게 %>
+        <a class="nav-link ms-4" aria-current="page" href="#home">HOME</a>
+        <a class="nav-link ms-4" href="#">SOLUTIONS</a>
+        <a class="nav-link ms-4" href="#">PRICING</a>
+        <a class="btn btn-dark rounded-pill px-4 ms-4">상담신청</a>
+      </div>
+    </div>
+  </div>
+</nav>
