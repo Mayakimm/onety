@@ -1,16 +1,35 @@
 <nav class="navbar navbar-expand-lg d-flex justify-content-between">
   <div class="container-fluid">
     <%# logo %>
-    <a class="navbar-brand fw-bold" href="#">원티</a>
+    <a class="navbar-brand fw-bold" href="#" style="font-size:36px;">원티</a>
     <%# buttons %>
     <div class="container-fluid" id="navbarNavAltMarkup">
       <div class="navbar-nav d-flex justify-content-end">
         <%# nav-link-active 효과 넣을 수 있어. 클릭 되었을 때 글씨 굵기 조금 다르게 %>
-        <a class="nav-link ms-4" aria-current="page" href="#home">HOME</a>
-        <a class="nav-link ms-4" href="#">SOLUTIONS</a>
-        <a class="nav-link ms-4" href="#">PRICING</a>
-        <a class="btn btn-dark rounded-pill px-4 ms-4">상담신청</a>
+        <a class="nav-link ms-5" aria-current="page" href="#home" style="font-size:24px;" >HOME</a>
+        <a class="nav-link ms-5" href="#solutions" style="font-size:24px;">SOLUTIONS</a>
+        <a class="nav-link ms-5" href="#pricing" style="font-size:24px;">PRICING</a>
+        <a class="btn btn-dark rounded-pill px-5 ms-5" href="#contact" style="font-size:24px;">상담신청</a>
       </div>
     </div>
   </div>
 </nav>
+<div class="d-flex justify-content-between" id="home" style="padding: 140px 100px;">
+  <div id="home-left" style="width:60%">
+    <div style="font-size:96px; font-weight:bolder">
+      Onety,<br>
+      단 하나의 솔루션
+    </div>
+    <p style="font-size:26px; padding-top:20px;">
+      월별 매출 및 지출 분석과 전략 수립을 통해<br>
+      당신의 비즈니스의 성장을 지원합니다
+    </p>
+    <div class="d-flex" style="padding-top:20px;">
+      <a href="" class="btn" style="width:130px; background-color:#FF5E00; border-radius:30px; color:white; margin-right:20px;">시작하기</a>
+      <a href="" class="btn" style="width:130px; border-radius:30px; border-color:#FF5E00; color:#FF5E00;">더 알아보기</a>
+    </div>
+  </div>
+  <div id="home-right" style="width:30%">
+    <%= image_tag '/money.png', alt: 'Money Image' %>
+  </div>
+</div>
