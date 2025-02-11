@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg d-flex justify-content-between" style="padding:20px 80px; position: fixed; top: 0; width: 100%; background-color:#F8F7F1;">
+<nav class="navbar navbar-expand-lg d-flex justify-content-between" style="padding:20px 80px; position: fixed; top: 0; width: 100%; background-color:#F8F7F1; z-index: 999;">
   <div class="container-fluid">
     <%# logo %>
     <a class="navbar-brand fw-bold" href="#" style="font-size:36px;">원티</a>
@@ -14,9 +14,10 @@
     </div>
   </div>
 </nav>
-<div style="padding:30px 80px;">
+
+<div style="padding:30px 80px; margin: 140px 100px;">
   <%# home section %>
-  <div class="d-flex justify-content-between" id="home" style="margin: 140px 100px;">
+  <div class="d-flex justify-content-between" id="home" style="margin-bottom:100px;">
     <div id="home-left" style="width:70%">
       <div style="font-size:92px; font-weight:bolder">
         Onety,<br>
@@ -35,11 +36,108 @@
       <%= image_tag '/money.png', alt: 'Money Image' %>
     </div>
   </div>
+  <%# Reviews section %>
+  <div class="reviews-container" style="margin-bottom:100px;">
+    <div class="reviews-track">
+      <!-- 1st set of cards (visible initially) -->
+      <div class="card mb-3 review-card">
+        <div class="row g-0" style="height: 220px;">
+          <div class="col-md-4" style="height: 100%">
+            <%= image_tag '/review2.jpg', alt: 'review2 Image', class:"img-fluid rounded-start review-img" %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Client 1</h5>
+              <p class="card-text">"Amazing service! Helped my business grow."</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 review-card">
+        <div class="row g-0" style="height: 220px;">
+          <div class="col-md-4" style="height: 100%">
+            <%= image_tag '/review1.jpg', alt: 'review1 Image', class:"img-fluid rounded-start review-img" %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Client 2</h5>
+              <p class="card-text">"The best decision I made for my startup!"</p>
+              <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 review-card">
+        <div class="row g-0" style="height: 220px;">
+          <div class="col-md-4" style="height: 100%">
+            <%= image_tag '/review1.jpg', alt: 'review1 Image', class:"img-fluid rounded-start review-img" %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Client 3</h5>
+              <p class="card-text">"Highly recommended! Professional service."</p>
+              <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2nd set of cards (duplicate for the animation effect) -->
+      <div class="card mb-3 review-card">
+        <div class="row g-0" style="height: 220px;">
+          <div class="col-md-4" style="height: 100%">
+            <%= image_tag '/review2.jpg', alt: 'review2 Image', class:"img-fluid rounded-start review-img" %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Client 1</h5>
+              <p class="card-text">"Amazing service! Helped my business grow."</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 review-card">
+        <div class="row g-0" style="height: 220px;">
+          <div class="col-md-4" style="height: 100%">
+            <%= image_tag '/review1.jpg', alt: 'review1 Image', class:"img-fluid rounded-start review-img" %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Client 2</h5>
+              <p class="card-text">"The best decision I made for my startup!"</p>
+              <p class="card-text"><small class="text-muted">Last updated 5 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card mb-3 review-card">
+        <div class="row g-0" style="height: 220px;">
+          <div class="col-md-4" style="height: 100%">
+            <%= image_tag '/review1.jpg', alt: 'review1 Image', class:"img-fluid rounded-start review-img" %>
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+              <h5 class="card-title">Client 3</h5>
+              <p class="card-text">"Highly recommended! Professional service."</p>
+              <p class="card-text"><small class="text-muted">Last updated 10 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <%# solutions section %>
-  <div id="solutions" style="padding:20px; margin-bottom:70px;">
+  <div id="solutions" style="margin-bottom:70px;">
     <div>
       <i class="fa-solid fa-check-to-slot" style="font-size:52px; margin-right:16px;"></i>
-      <span style="font-size:52px; font-weight:bolder">똑똑한 솔루션으로 간편한 월정산</span>
+      <span style="font-size:36px; font-weight:bolder">똑똑한 솔루션으로 간편한 월정산</span>
       <p style="font-size:26px;">자동화된 지출 카테고리 분류와 심층 리포트로 운영의 투명성을 확보하고, 비즈니스 성장을 가속화하세요.</p>
     </div>
     <div id="solution1" class="w-100 d-flex justify-content-between" style="margin:100px 0px; width:1000px;">
