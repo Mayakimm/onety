@@ -256,5 +256,29 @@
     </div>
   </div>
   <%# contact section %>
-  <div id="contact" style="padding:20px; margin-bottom:70px;"></div>
+  <div id="contact" style="padding:20px; margin-bottom:70px;">
+    <h1 style="text-align:center;">상담신청</h1>
+    <div style="background-color:white; margin: 50px; padding:80px 100px; border-radius:20px;">
+      <form>
+        <div class="mb-3">
+          <label for="name" class="form-label">성명</label>
+          <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="mb-3">
+          <label for="phone" class="form-label">전화번호</label>
+          <input type="tel" class="form-control" id="phone" required>
+        </div>
+        <div class="mb-3">
+          <label for="email" class="form-label">이메일</label>
+          <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="mb-3">
+          <label for="message" class="form-label">내용</label>
+          <textarea class="form-control" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn" style="width:100px; background-color:#FF5E00; border-radius:30px; color:white; margin-right:20px;">신청하기</button>
+      </form>
+
+    </div>
+  </div>
 </div>
