@@ -261,43 +261,43 @@
       </div>
     </div>
   </div>
-  <%# contact section %>
-  <div id="contact" style="padding:20px; margin-top:200px;">
-    <div style="text-align:center; font-size:60px; font-weight:bold;">상담신청</div>
-    <div style="background-color:white; margin: 50px; padding:80px 100px; border-radius:10px; box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 10%);">
-      <form>
-        <div class="mb-3">
-          <label for="name" class="form-label" style="font-weight:bold">
-            성명 <span style="color:#FF5E00;">*</span>
-          </label>
-          <input type="text" class="form-control input-white" id="name" required>
-        </div>
-        <div class="mb-3">
-          <label for="phone" class="form-label"  style="font-weight:bold">
-            전화번호 <span style="color:#FF5E00;">*</span>
-          </label>
-          <input type="tel" class="form-control input-white" id="phone" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label"  style="font-weight:bold">
-            이메일 <span style="color:#FF5E00;">*</span>
-          </label>
-          <input type="email" class="form-control input-white" id="email" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label"  style="font-weight:bold">
-            내용 <span style="color:#FF5E00;">*</span>
-          </label>
-          <textarea class="form-control input-white" id="message" rows="4" maxlength="1300" required></textarea>
-          <p id="word-limit" style="color: lightgray; font-size: 12px;">최대 작성 길이는 한글 1300자입니다.</p>
-        </div>
-        <div style="display: flex; justify-content: center; margin-top: 40px;">
-          <button type="submit" class="btn" style="width:100px; background-color:#FF5E00; border-radius:30px; color:white;">신청하기</button>
-        </div>
-      </form>
+<%# contact section %>
+<div id="contact" style="padding:20px; margin-top:200px;">
+  <div style="text-align:center; font-size:60px; font-weight:bold;">상담신청</div>
+  <div style="background-color:white; margin: 50px; padding:80px 100px; border-radius:10px; box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 10%);">
+    <%= form_with model: @contact, url: contacts_path, local: true, data: { turbo: false } do |form| %>
+      <div class="mb-3">
+        <%= form.label :name, "성명", class: 'form-label', style: 'font-weight:bold' %>
+        <span style="color:#FF5E00;">*</span>
+        <%= form.text_field :name, class: 'form-control input-white', required: true %>
+      </div>
 
-    </div>
+      <div class="mb-3">
+        <%= form.label :phone, "전화번호", class: 'form-label', style: 'font-weight:bold' %>
+        <span style="color:#FF5E00;">*</span>
+        <%= form.telephone_field :phone, class: 'form-control input-white', required: true %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :email, "이메일", class: 'form-label', style: 'font-weight:bold' %>
+        <span style="color:#FF5E00;">*</span>
+        <%= form.email_field :email, class: 'form-control input-white', required: true %>
+      </div>
+
+      <div class="mb-3">
+        <%= form.label :message, "내용", class: 'form-label', style: 'font-weight:bold' %>
+        <span style="color:#FF5E00;">*</span>
+        <%= form.text_area :message, class: 'form-control input-white', rows: 4, maxlength: 1300, required: true %>
+        <p id="word-limit" style="color: lightgray; font-size: 12px;">최대 작성 길이는 한글 1300자입니다.</p>
+      </div>
+
+      <div style="display: flex; justify-content: center; margin-top: 40px;">
+        <%= form.submit "신청하기", class: 'btn', style: 'width:100px; background-color:#FF5E00; border-radius:30px; color:white;' %>
+      </div>
+    <% end %>
   </div>
+</div>
+
 
 </div>
 
