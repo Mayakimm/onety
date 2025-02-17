@@ -1,32 +1,36 @@
 .reviews-container {
-  overflow: hidden; /* Hide the overflow to ensure smooth animation */
-  width: 100%; /* Full width of the container */
+  overflow: hidden;
+  width: 100%;
 }
 
 .reviews-track {
   display: flex;
-  width: 200%; /* Double the width of the container (two sets of cards) */
-  animation: moveReviews 12s linear infinite; /* Animation will run infinitely */
+  width: 200%;
+  animation: moveReviews 12s linear infinite;
 }
 
 .review-card {
-  width: 840px; /* The width of one card */
-  margin-right: 20px; /* Space between the cards */
+  width: 1200px;
+  margin-right: 60px;
 }
 
 @keyframes moveReviews {
   0% {
-    transform: translateX(0); /* Start at the first position */
+    transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%); /* Move to the left by the width of half the container (second set of cards comes in) */
+    transform: translateX(-50%);
   }
 }
 
 
 .review-img {
-  width: 100%; // Adjust to your preferred size
-  height: 100%; // Keep it proportional
-  object-fit: cover; // Ensures the image fills the dimensions without distortion
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   object-position: 50% 20%;
+}
+
+.input-white {
+  background-color: white !important;
 }
