@@ -1,8 +1,32 @@
-<h1>Contact Details</h1>
+<div class="d-flex flex-row">
+  <div style="width:450px; height:100vh; background-color:#F8F4EB">
+    <div class="d-flex justify content between">
+      <div>Onety</div>
+      <div><i class="fa-solid fa-angles-left"></i></div>
+    </div>
+    <div id="tab">
+      <div>상담문의</div>
+      <div>멤버정보</div>
+    </div>
+  </div>
 
-<p><strong>Name:</strong> <%= @contact.name %></p>
-<p><strong>Email:</strong> <%= @contact.email %></p>
-<p><strong>Phone:</strong> <%= @contact.phone %></p>
-<p><strong>Message:</strong> <%= @contact.message %></p>
+  <%# left side %>
+  <div class="flex-grow-1" >
+    <div style="height: 150px; background-color:#F8F4EB">
+      Admin
+    </div>
+    <%# under %>
+    <div style="padding:50px; background-color:#F8F7F1">
+      <h1>상담 세부사항</h1>
 
-<%= link_to "Back to Contacts", admin_contacts_path, class: "btn btn-secondary" %>
+      <p><strong>Name:</strong> <%= @contact.name %></p>
+      <p><strong>Email:</strong> <%= @contact.email %></p>
+      <p><strong>Phone:</strong> <%= @contact.phone %></p>
+      <p><strong>Message:</strong> <%= @contact.message %></p>
+
+      <%= link_to "Back to Contacts", admin_contacts_path, class: "btn btn-secondary" %>
+    </div>
+    
+  </div>
+
+</div>

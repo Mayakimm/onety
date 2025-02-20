@@ -1,26 +1,49 @@
-<h1>Contacts</h1>
+<div class="d-flex flex-row">
+  <div style="width:450px; height:100vh; background-color:#F8F4EB">
+    <div class="d-flex justify content between">
+      <div>Onety</div>
+      <div><i class="fa-solid fa-angles-left"></i></div>
+    </div>
+    <div id="tab">
+      <div>상담문의</div>
+      <div>멤버정보</div>
+    </div>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Phone</th>
-      <th>Message</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @contacts.each do |contact| %>
-      <tr>
-        <td><%= contact.name %></td>
-        <td><%= contact.email %></td>
-        <td><%= contact.phone %></td>
-        <td><%= contact.message %></td>
-        <td>
-          <%= link_to "View", admin_contact_path(contact), class: "btn btn-primary" %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <%# left side %>
+  <div class="flex-grow-1" >
+    <div style="height: 150px; background-color:#F8F4EB">
+      Admin
+    </div>
+    <%# under %>
+    <div style="padding:50px; background-color:#F8F7F1">
+      <h1>상담문의</h1>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Message</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @contacts.each do |contact| %>
+            <tr>
+              <td><%= contact.name %></td>
+              <td><%= contact.email %></td>
+              <td><%= contact.phone %></td>
+              <td><%= contact.message %></td>
+              <td>
+                <%= link_to "View", admin_contact_path(contact), class: "btn btn-primary" %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
